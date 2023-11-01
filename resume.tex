@@ -1,0 +1,209 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{fontawesome}
+    \usepackage{hyphenat}
+    \usepackage{fancyhdr}
+    \usepackage[english]{babel}
+    \usepackage[usenames,dvipsnames]{color}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% % Adjust margins
+\addtolength{\oddsidemargin}{-0.3in}
+\addtolength{\evensidemargin}{-0.3in}
+\addtolength{\textwidth}{0.6in}
+% \addtolength{\topmargin}{-0.1in}
+% \addtolength{\footskip}{-0.5in}
+
+% \addtolength{\textheight}{1.0in}
+
+% \urlstyle{same}
+
+% \raggedbottom
+% \raggedright
+% \setlength{\tabcolsep}{0in}
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	\textbf{\Huge \scshape {Amit Timalsina}} \\ \vspace{3pt}
+    \small
+    \href{https://www.linkedin.com/in/arasgungore}{linkedin.com/in/amittimalsina}
+    $|$
+    \href{https://selftaughtamit.medium.com/}{selftaughtamit.medium.com}
+    $|$
+    \href{https://github.com/amit-timalsina}{github.com/amit-timalsina} \\
+	{Bengaluru, India}
+    $|$
+    \href{mailto:amittimlasina14@gmail.com}{amittimalsina14@gmail.com} \\
+\end{center}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Docsumo} \hfill Bengaluru, India\\
+\textit{Team Lead} \hfill April 2023 - Present\\
+\vspace{-1mm}
+{Leading a team of 2 machine learning engineers to build and maintain internal engineering tools for model training, inference, and data assets.}
+\begin{itemize} \itemsep 0pt
+	\item Developed end-to-end pipleine for 100\% reproducibility of models and model evaluation metrics by utilizing versioned data store (DVC, gcs, GitLab) and improved logging (MLflow).
+    \item Conducted rigorous benchmarking experiments encompassing various document types to validate efficacy of same and cross-doctype transfer learning. When dealing with a limited number of doucments, achieved 6\% average performance improvement.
+    \item Built dashboard to view metadata of data assets scattered through multiple environments. This dashboard helps client api, research, product management, and CXOs as data is our moat.
+    \item $[$WIP$]$ Building docsumo-evals package for evaluation of kv models, table models, and rulebased.
+
+\end{itemize}
+\textit{Machine Learning Engineer} \hfill May 2022 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0pt
+	\item Collaborated on building a GPT-based KV extractor to solve the cold start problem for new document types and reducing human annotation by 70\%. Implemented zero-shot prompting, chunking, and rule-based strategies to handle hallucinations and edge cases.
+	\item Led research efforts for multilingual KV extraction from Bank statements and Invoice, works include fine-tuning SOTA models, preparing benchmarking data, benchmarking models, and creating an inference API for the best model. Resulted in average accuracy improvment of 7\%.
+	\item Helped in building stronger product by working on new features, feature improvement, and bugfixes of 4 key-value and table extraction apis and 3 packages.
+	\item Benchmarked the rule-based header classifier in rent roll table extraction, and added a fasttext-based classifier with a 0.96 F1 score to the pipeline.
+	\item Performed extensive research, fine-tuned Visual Document Understanding (VDU) models for NER tasks on Invoice, Bank Statements, and Fix forms. Spearheaded benchmarking efforts, which resulted in a remarkable 91\%+ accuracy across document types achieved by the team.
+	\item Researched and built classification models for the chart of accounts (COA) classification in SaaS, CRE, and balance sheet documents, which currently serve customers in production with an average F1 score of 0.8.
+	\item Wrote 7 articles on topics of like OCR, Automated Data extraction, Few-shot learning, and Table extraction that are published in \href{https://www.docsumo.com/blog-authors/amit-timalsina}{\color{blue}Docsumo's blog}.
+\end{itemize}
+
+\textbf{Nepal Can Move} \hfill Remote\\
+\textit{Machine Learning Engineer} \hfill July 2021 - March 2022\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0pt
+	\item Built the Delivery failure prediction system which decreased the delivery failure rate from 25\% to 15\% until it was maintained. Implemented CI/CD, Data automation, Platform automation for Automated model retraining.
+	\item Researched and built information extraction(IE) model for forms and receipts using OpenCV, pyTesseract, spaCy, and Transformers. For invoicea with correct OCR extraction, the token level accuracy was 0.87.
+	\item Researched and built the Recommendation engine for Ecommerce using Tensorflow recommenders and Keras. The prototype benchmarked on 100k movielens ratings provided 75\% accuracy on top 10 retrieval.
+	\item Pretrained transformer with Bert architecture on medical data to build a sequence generation model for guided medical diagnosis of 25 diseases. The model provided 0.83 F1 score.
+\end{itemize}
+
+\textbf{Genese Solution and Genese Cloud Academy} \hfill Remote\\
+\textit{Data Science Consultant (Part time)} \hfill June 2021 - May 2022\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0pt
+	\item Prepared MLOPs pipeline containing DevOps (CI,CD) and Platform automation (CT) using AWS Sagemaker in conjunction with MLFlow. The prototype provided 100\% automation to our ML workflow.
+	\item Involved in research, design, review, and refinement of content - reading material, quizzes, assignments, and projects for AWS Data Analytics in Advanced Digital Skills and Global Certification Program under KPYEP.
+	\item Taught Data Analytics, Machine Learning algorithms, and amazon web services (AWS) for Machine Learning to 4 batches of 40 students each from Pakistan.
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{Sainik Awasiya Mahavidyalaya}\hfill Bhaktapur, Nepal\\
+Diploma Computer Engineering \hfill July 2019 - Oct 2021\\
+\vspace{2mm}
+\textbf{Coursera}\hfill Remote\\
+Deep Learning Specialization\hfill Aug 2020 - Nov 2020\\
+\vspace{2mm}
+\textbf{Coursera}\hfill Remote\\
+DeepLearning.ai TensorFlow Developer Specialization\hfill Aug 2020 - Nov 2020\\
+\vspace{2mm}
+\textbf{Coursera}\hfill Remote\\
+Google Project Management: Professional Certificates\hfill Oct 2022 - Ongoing\\
+\vspace{2mm}
+\textbf{Indian Institute of Technology, Madras}\hfill Remote\\
+BS Data Science and Applications\hfill Oct 2023 - Ongoing\\
+\vspace{4mm}
+
+\header{Skills}
+\small{\item{
+    \textbf{Language and Technology:}{ Python, Bash, Docker, AWS, GCP \\}
+    \textbf{Framework \& Library:}{ OpenAi, Langchain, Llama-index, Pinecone, Atlas Vector Search, Tensorflow, Keras, Pytorch,
+    Transformers, Fasttext, OpenCV, XGBoost,
+    scikit-learn, numpy, pandas, nltk, spacy, Flask, MlFlow, DVC,
+    Amazon Sagemaker Pipeline \\}
+    \textbf{Machine Learning:}{ Applied Statistics and Probability, Machine learning and Deep learning
+    algorithms, Natural Language Processing and Understanding, Document AI,
+    Information Extraction, RAG, Generative AI, Recommender Systems, MLOps,
+    Transfer Learning, peft \\}
+    \textbf{Project Management:}{ Agile methodologies like Scrum and Lean, End-to-End project management,
+    Clickup, Communication \\}   
+}
+}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{Predicting and Forecasting Happiness}}\hfill \href{https://github.com/amit-timalsina/Predicting-and-Forecasting-Happiness}{Github}
+\vspace{-1mm}
+\begin{itemize} \itemsep 0pt
+    \item Researched and built a predictor model that detects mood of a person based on individual actions and behaviours. Furthermore the model suggests actions and behaviours to be happy. 
+    \item Researched and built a forecasting model to forecast individual actions several timestamps ahead with minimum past data (Time Series Forecasting).
+    \item End to End project from data collection to deployment including intensive research.
+\end{itemize}
+\vspace*{2mm}
+
+\header{Awards and Achievements}
+\textbf{Young Scientist of Nepal} \hfill Young Scientists Summit (RECAST)\\
+Won the first position in Computer Science department of 5 th Young Scientist Summit (YSS). \hfill 2020\\
+\vspace*{2mm}
+\textbf{Glocal 20under20 of 2020} \hfill Glocal Teen Hero\\
+Selected as Glocal 20Under20 for 2020 Batch as a “The Early Change Makers”. \hfill 2020\\
+\vspace*{2mm}
+
+\ 
+\end{document}
