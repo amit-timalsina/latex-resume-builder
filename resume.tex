@@ -96,6 +96,8 @@
 \begin{center}
 	\textbf{\Huge \scshape {Amit Timalsina}} \\ \vspace{3pt}
     \small
+    \href{https://github.com/amit-timalsina}{github.com/amit-timalsina}
+    $|$
     \href{https://www.linkedin.com/in/amittimalsina}{linkedin.com/in/amittimalsina}
     $|$
     \href{https://selftaughtamit.medium.com/}{selftaughtamit.medium.com}
@@ -112,10 +114,10 @@
 {Consulting on LLM integration for extraction, RAG, Agentic use-cases.}
 \vspace{-1mm}
 \begin{itemize} \itemsep 0pt
-	\item Built custom PDF parsing solution for clinical trial documents that improved entity extraction accuracy by 50\%+ by solving cross-page entity detection and reducing LLM tokens by 70\%. Enabled enterprise client to build analytics product for stakeholders.
-	\item Led end-to-end data extraction systems for clinical trials and document processing startups, improving accuracy vs. previous LayoutLM models. Built OMR extraction solution in 1 week for startup client, deployed to production in 2 weeks.
-	\item Processed 200k clinical trial documents enabling new analytics services (e.g., "How often is age inclusion criteria used in trials?"). Handled rate limits, edge cases, and tight deadlines across multiple LLM providers (Anthropic, Llama, Mistral, Qwen).
-	\item Built RAG chat application over clinical trial data in Snowflake achieving 95\% recall@10. Internal stakeholders reported high satisfaction, product ready for customer deployment.
+	\item Built PDF parser for clinical protocols that returned layout conserved structured output. This improved F1 of chunk retrieval by 60\% absolute and accuracy of entity extraction by 50\% absolute.
+	\item Processed 200k clinical protocols enabling new analytics services (e.g., "How often is age inclusion criteria used in trials?"). Handled rate limits, edge cases, and tight deadlines across multiple LLM providers (Anthropic, Llama).
+	\item Built RAG chat application over clinical protocol extracted data in Snowflake, achieving 95\% recall@10. Internal stakeholders reported high satisfaction, product ready for customer deployment.
+    \item Built OMR extraction using VLM, YOLO, and LLM in 1 week for a startup, deployed to production in 2 weeks. 
 	\item Implemented Langfuse for LLM observability, reducing debugging time by 80\% and enabling customer-level spend tracking. Led cross-functional collaboration with SRE team for in-house deployment.
 \end{itemize}
 
@@ -132,11 +134,11 @@
 
 \textbf{Docsumo} \hfill Bangalore, India\\
 \textit{Team Lead} \hfill April 2023 - January 2024\\
-{Lead team of two engineers to build and maintain internal engineering tools for data assets, and model evaluation.}
+{Lead team of two engineers to build and maintain internal dev tools for developer efficiency.}
 \vspace{-1mm}
 \begin{itemize} \itemsep 0pt
-	\item Built end-to-end ML pipeline with versioned data store (DVC, GCS, Gitlab) and MLFlow logging, reducing benchmarking experiment time by 50\% and preventing costly GPU experiments through centralized configuration management.
-	\item Developed centralized evaluation suite ensuring 100\% guaranteed metric comparison across teams. Single-point bug fixes improved system reliability and reduced maintenance overhead.
+	\item Developed end-to-end pipleine for reproducibility of models and evaluation metrics by utilizing versioned data store (DVC, GCS, Gitlab). Reduced benchmarking experiment time by 50\% and GPU resources waste which was caused by incorrect experiments and no bechmark datasets. 
+	\item Developed centralized evaluation suite ensuring 100\% accurate metric comparison across experiements. Single-point bug fixes improved evaluation reliability and reduced maintenance overhead.
 	\item Created data assets dashboard with metadata across prod, staging, and testing environments. It also had weekly model performance tracking of all customer accounts, used by teams to evaluate improvements and degradation.
 	\item Led architectural decisions for tracing, evaluation frameworks, and uniform benchmarking datasets across multiple document types.
 \end{itemize}
@@ -144,18 +146,18 @@
 \textit{Machine Learning Engineer} \hfill May 2022 - January 2024\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 0pt
-	\item Built LLM-powered key-value extractor reducing annotation time by 70\% and enabling faster support for new document types. Implemented layout parsing, zero-shot prompting, and confidence scoring for USBS, 1040 forms, Acords, Invoices, and Utility bills.
+	\item Built LLM-powered key-value extractor reducing annotation time by 70\% and enabling faster support for new document types. Implemented layout parsing, zero/few-shot prompting, and confidence scoring.
 	\item Fine-tuned Visual Document Understanding models for NER tasks achieving 91\%+ accuracy across document types. Deployed 10+ models to production serving enterprise customers with 500k+ ARR.
 	\item Led multilingual KV extraction research for Spanish bank statements and Chinese invoices, achieving 7\% accuracy improvement from baseline. Improved customer retention through enhanced international document support.
-	\item Built rule-based table header classifier with FastText ensemble achieving 96\% accuracy. Created inference API for production deployment.
+	\item Built table header classifier with FastText and fuzzy ensemble achieving 96\% accuracy. Created inference API for production deployment.
 \end{itemize}
 
 \textbf{Nepal Can Move} \hfill Remote\\
 \textit{Junior Machine Learning Engineer} \hfill July 2021 - March 2022\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 0pt
-	\item Built and deployed delivery failure prediction system processing 100k-150k monthly deliveries, reducing failure rate from 25\% to 15\% and saving Re 6 lakhs (5k USD) in first month. Optimized for 87\% recall with limited features, implemented automated CI/CD pipeline with weekly retraining and batch feature generation for production stability.
-	\item Developed invoice information extraction system reducing processing time from 2 minutes to 4 seconds per document with 87\% token-level accuracy. Built end-to-end pipeline using OpenCV, pyTesseract, spaCy, and Transformers for critical logistics document processing.
+	\item Built and deployed delivery failure prediction system processing 100k-150k monthly deliveries, reducing failure rate from 25\% to 15\% and saving Re 6 lakhs (5k USD) in first month. Optimized for 87\% recall with limited features, implemented automated CI/CD pipeline for weekly retraining and batch feature generation.
+	\item Developed invoice information extraction system reducing processing time from 2 mins to 4 secs per document with 87\% token-level accuracy. Built end-to-end pipeline using OpenCV, pyTesseract, spaCy, and Transformers.
 	\item Researched recommendation engine prototype achieving 75\% accuracy on top@10 retrieval using TensorFlow Recommenders, benchmarked on 100k MovieLens ratings for potential e-commerce integration.
 	\item Built medical diagnosis sequence generation model using BERT architecture for 25 diseases, achieving 0.83 F1 score as POC for healthcare business venture.
 \end{itemize}
@@ -164,52 +166,45 @@
 \header{Products}
 \vspace{1mm}
 
-\textbf{Blintic AI} \hfill Remote\\
-\textit{AI-Powered Document Processing Platform} \hfill 2023 - Ongoing\\
-\vspace{-1mm}
-{To be written}
+\textbf{Blintic AI} \hfill \href{https://www.blinticai.com/}{blinticai.com} $|$ \href{https://app.blinticai.com}{app.blinticai.com}\\
+\textit{No-Code AI Agent Platform for Customer Support} \hfill January 2025 - Ongoing\\
+
+{Built end-to-end no-code platform enabling businesses to create AI agents for customer support without technical expertise.}
 \begin{itemize} \itemsep 0pt
-    \item To be written
+    \item Developed full-stack platform with Next.js frontend and FastAPI backend, serving 10+ demo customers with custom agent orchestration and hybrid retrieval (dense embeddings + BM25 + Jina reranker) for comprehensive knowledge base search.
+    \item Built custom agent orchestrator supporting multiple data sources (text, files, URLs, website scraping) and custom actions (API calls) for external integrations, enabling seamless workflow automation and third-party system connectivity.
+    \item Implemented intelligent support escalation system with team tagging and custom chat embed UI customization, allowing businesses to maintain control over complex queries while providing personalized customer experiences.
+    \item Architected scalable infrastructure on Vercel and Google Cloud Run with PostgreSQL database, Supabase auth, and comprehensive observability using Langfuse for production monitoring and performance tracking.
+    \item Planned for open-source release to democratize AI agent development for customer support and enable community contributions to the platform.
 \end{itemize}
 
-\textbf{ORGO Earth} \hfill Remote\\
-\textit{Sustainable Agriculture AI Platform} \hfill 2022 - Ongoing\\
-\vspace{-1mm}
-{To be written}
-\begin{itemize} \itemsep 0pt
-    \item To be written
-\end{itemize}
 
 %==== Projects ====%
 \header{Projects}
 {\textbf{Document Classification}}\hfill \href{https://github.com/amit-timalsina/document-classification}{Github}
-\vspace{-1mm}
+\vspace{-2mm}
 \begin{itemize} \itemsep 0pt
     \item Common OCR interface for closed-source providers like Google Vision and open source providers like Pytesseract.
     \item Training, Evaluation, and Inference support for Fasttext, Small Language Models (BERT, etc), Vision Language Models (like LayoutLM), and LLMs.
 \end{itemize}
-\vspace*{2mm}
 
-{\textbf{Predicting and Forecasting Happiness}}\hfill \href{https://github.com/amit-timalsina/Predicting-and-Forecasting-Happiness}{Github}
+{\textbf{Cricket Fitness Analysis}}\hfill \href{https://github.com/amit-timalsina/sports-analysis}{Github} \\
+FastAPI, Postgres, Supabase, Docker, WebSocket, Langfuse
 \vspace{-1mm}
 \begin{itemize} \itemsep 0pt
-    \item Predictor model that detects mood of a person based on questionnaire and data tracked by fitness tracker.
-    \item Forecasting model to forecast individual actions several timestamps ahead with minimum past data (Time Series Forecasting).
-    \item This is a research project which resulted in a research paper submitted to Young Scientists Submit Nepal 2020.
+    \item Log fitnes, coaching, match, and rest day using voice input with AI follow up questions. Input is transcribed using OpenAI whisper and then converted into structured ouptut using OpenAI structured output.
+    \item Developed progress tracking dashboard with charts for weekly performance visualization, enabling players to monitor training, coaching, matches, and rest days systematically.
 \end{itemize}
-\vspace*{2mm}
 
 %==== Skills ====%
 \header{Skills}
 \small{
-    \textbf{Language and Technology:}{ Python, Bash, Docker, AWS, GCP, PostgreSQL, Snowflake \\}
-    \textbf{Framework \& Library:}{ FastAPI, Flask, PyTorch, TensorFlow (Keras), Transformers, HuggingFace Hub, FastText,
-    XGBoost, OpenCV, Scikit-learn, Instructor, OpenAI, Langchain, Llama-index, CrewAI, Autogen, Qdrant VDB, Pinecone VDB, 
-    Atlas Vector Search, Amazon SageMaker, MLFlow, DVC, NumPy, Pandas, NLTK, spaCy \\}
-    \textbf{Machine Learning:}{ Prompting, Agentic Systems, RAG, Information Extraction, Document AI, Transfer Learning,
+    \textbf{Language and Technology:}{ Python, Bash, Sqlite, Postgres, Docker, AWS, GCP\\}
+    \textbf{Framework \& Library:}{ FastAPI, Flask, Pydantic, PyTorch, TensorFlow (Keras), Transformers, HuggingFace Hub, FastText,
+    XGBoost, OpenCV, Scikit-learn, Instructor, OpenAI, Langchain, Llama-index, CrewAI, Autogen, Qdrant VDB, Pinecone VDB, Amazon SageMaker, MLFlow, DVC, NumPy, Pandas, NLTK, spaCy \\}
+    \textbf{Machine Learning:}{ Prompting, Agentic Systems, RAG, Information Extraction, Document AI, Transfer Learning, PEFT,
     Fine-tuning, MLOps, Applied Statistics and Probability, Machine Learning and Deep Learning algorithms, NLP and NLU,
-    Recommendation Systems, Generative AI, PEFT \\}
-    \textbf{Project Management:}{ Agile methodologies like Scrum and Lean, End-to-End project management, Communication \\}   
+    Recommendation Systems \\}
 }
 \vspace{2mm}
 
@@ -223,19 +218,19 @@ Selected as Glocal 20Under20 for 2020 Batch as a "The Early Change Makers". \hfi
 \vspace*{2mm}
 
 %==== Education ====%
-\header{Education}
-\textbf{Sainik Awasiya Mahavidyalaya}\hfill Bhaktapur, Nepal\\
-Diploma Computer Engineering \hfill July 2019 - Oct 2021\\
-\vspace{2mm}
-\textbf{Coursera}\hfill Remote\\
-Deep Learning Specialization\hfill Aug 2020 - Nov 2020\\
-\vspace{2mm}
-\textbf{Coursera}\hfill Remote\\
-DeepLearning.ai TensorFlow Developer Specialization\hfill Aug 2020 - Nov 2020\\
-\vspace{2mm}
-\textbf{Coursera}\hfill Remote\\
-Google Project Management: Professional Certificates\hfill Oct 2022 - Nov 2023\\
-\vspace{4mm}
+% \header{Education}
+% \textbf{Sainik Awasiya Mahavidyalaya}\hfill Bhaktapur, Nepal\\
+% Diploma Computer Engineering \hfill July 2019 - Oct 2021\\
+% \vspace{2mm}
+% \textbf{Coursera}\hfill Remote\\
+% Deep Learning Specialization\hfill Aug 2020 - Nov 2020\\
+% \vspace{2mm}
+% \textbf{Coursera}\hfill Remote\\
+% DeepLearning.ai TensorFlow Developer Specialization\hfill Aug 2020 - Nov 2020\\
+% \vspace{2mm}
+% \textbf{Coursera}\hfill Remote\\
+% Google Project Management: Professional Certificates\hfill Oct 2022 - Nov 2023\\
+% \vspace{4mm}
 
 \ 
 \end{document}
